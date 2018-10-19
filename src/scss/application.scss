@@ -1,0 +1,209 @@
+@import url("../../node_modules/sanitize.css/sanitize.css");
+@import "default";
+@import "sprite";
+
+%img-rep {
+    text-indent: 120%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.p-text-1 {
+    @include sprite($img-text-1);
+    @extend %img-rep;
+}
+
+.p-text-2 {
+    @include sprite($img-text-2);
+    @extend %img-rep;
+}
+
+.p-text-3 {
+    @include sprite($img-text-3);
+    @extend %img-rep;
+}
+
+.p-text-4 {
+    @include sprite($img-text-4);
+    @extend %img-rep;
+}
+
+.p-text-5 {
+    @include sprite($img-text-5);
+    @extend %img-rep;
+}
+
+.p-text-6 {
+    @include sprite($img-text-6);
+    @extend %img-rep;
+}
+
+.p-text-7 {
+    @include sprite($img-text-7);
+    @extend %img-rep;
+}
+
+.p-text-a {
+    @include sprite($img-text-a);
+    @extend %img-rep;
+}
+
+.p-text-b {
+    @include sprite($img-text-b);
+    @extend %img-rep;
+}
+
+.p-text-c {
+    @include sprite($img-text-c);
+    @extend %img-rep;
+}
+
+.p-text-d {
+    @include sprite($img-text-d);
+    @extend %img-rep;
+}
+
+.p-text-e {
+    @include sprite($img-text-e);
+    @extend %img-rep;
+}
+
+.p-text-f {
+    @include sprite($img-text-f);
+    @extend %img-rep;
+}
+
+.p-text-g {
+    @include sprite($img-text-g);
+    @extend %img-rep;
+}
+
+.p-text-flat {
+    @include sprite($img-text-flat);
+    @extend %img-rep;
+}
+
+.p-text-sharp {
+    @include sprite($img-text-sharp);
+    @extend %img-rep;
+}
+
+.p-text-string {
+    @include sprite($img-text-string);
+    @extend %img-rep;
+}
+
+.p-icon-count-on {
+    @include sprite($icon-count-on);
+    @extend %img-rep;
+}
+
+.p-icon-count-off {
+    @include sprite($icon-count-off);
+    @extend %img-rep;
+}
+
+.p-btn-play {
+    @include sprite($btn-play);
+    cursor: pointer;
+    @extend %img-rep;
+}
+
+.p-btn-stop {
+    @include sprite($btn-stop);
+    cursor: pointer;
+    @extend %img-rep;
+}
+
+.layout-view {
+    padding: 0 30px;
+    width: 750px;
+    height: 730px;
+    position: absolute;
+    top: 245px;
+}
+
+.string-view {
+    width: 215px;
+    height: 144px;
+    position: relative;
+    display: flex;
+    .p-text-string {
+        position: absolute;
+        bottom: -9px;
+        right: 0;
+    }
+}
+
+.counter-view {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.note-view {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-view {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -33px;
+}
+
+// .note-cell {
+//     position: relative;
+//     &.is-next-note {
+//         margin-right: 20px;
+//         transform: scale(0.5);
+//         transform-origin: bottom;
+//     }
+//     .p-text-flat {
+//         position: absolute;
+//         &.is-layout-c,
+//         &.is-layout-e,
+//         &.is-layout-b {
+//             right: -73px;
+//         }
+//         &.is-layout-d {
+//             right: -58px;
+//         }
+//         &.is-layout-f {
+//             right: -80px;
+//         }
+//         &.is-layout-g {
+//             right: -60px;
+//         }
+//         &.is-layout-a {
+//             right: 0;
+//         }
+//         top: -115px;
+//     }
+//     .p-text-sharp {
+//         position: absolute;
+
+//         &.is-layout-b,
+//         &.is-layout-c {
+//             right: -85px;
+//         }
+//         &.is-layout-d {
+//             right: -76px;
+//         }
+//         &.is-layout-e {
+//             right: -108px;
+//         }
+//         &.is-layout-f {
+//             right: -116px;
+//         }
+//         &.is-layout-g {
+//             right: -80px;
+//         }
+//         &.is-layout-a {
+//             right: -30px;
+//         }
+//         top: -105px;
+//     }
+// }
