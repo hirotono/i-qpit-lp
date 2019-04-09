@@ -1,209 +1,158 @@
-@import url("../../node_modules/sanitize.css/sanitize.css");
+@import "setting";
 @import "default";
 @import "sprite";
+@import "component";
 
-%img-rep {
-    text-indent: 120%;
-    white-space: nowrap;
-    overflow: hidden;
-}
+// componentに対してのadjust
+@import "adjust";
 
-.p-text-1 {
-    @include sprite($img-text-1);
-    @extend %img-rep;
-}
 
-.p-text-2 {
-    @include sprite($img-text-2);
-    @extend %img-rep;
-}
+@mixin img-background ($image: false, $position: false, $repeat: false, $pixelRatio: 2, $width: false, $height: false, $bg-width: false, $bg-height: false) {
+    $image: unquote($image);
+    $image-path-for-compass: $image;
+    $background-image-width: false;
+    $background-image-height: false;
+    @if $image != false {background-image: url($image);}
+    @if $position != false {background-position: $position;}
+    @if $repeat != false {background-repeat: $repeat;}
 
-.p-text-3 {
-    @include sprite($img-text-3);
-    @extend %img-rep;
-}
+    @if ($bg-width != false and $bg-height != false) {
+        $background-image-width: $bg-width / $pixelRatio;
+        $background-image-height: $bg-height / $pixelRatio;
+        background-size: #{$background-image-width} $background-image-height;
+    }
 
-.p-text-4 {
-    @include sprite($img-text-4);
-    @extend %img-rep;
-}
+    @if $width  == none {} @else if $width  != false {width: $width;}   @else if $bg-width != false {width: $background-image-width;}
+    @if $height == none {} @else if $height != false {height: $height;} @else if $bg-height != false {height: $background-image-height;}
+};
 
-.p-text-5 {
-    @include sprite($img-text-5);
-    @extend %img-rep;
-}
+//==========================================
+//
+// LP
+//
+//==========================================
 
-.p-text-6 {
-    @include sprite($img-text-6);
-    @extend %img-rep;
-}
-
-.p-text-7 {
-    @include sprite($img-text-7);
-    @extend %img-rep;
-}
-
-.p-text-a {
-    @include sprite($img-text-a);
-    @extend %img-rep;
-}
-
-.p-text-b {
-    @include sprite($img-text-b);
-    @extend %img-rep;
-}
-
-.p-text-c {
-    @include sprite($img-text-c);
-    @extend %img-rep;
-}
-
-.p-text-d {
-    @include sprite($img-text-d);
-    @extend %img-rep;
-}
-
-.p-text-e {
-    @include sprite($img-text-e);
-    @extend %img-rep;
-}
-
-.p-text-f {
-    @include sprite($img-text-f);
-    @extend %img-rep;
-}
-
-.p-text-g {
-    @include sprite($img-text-g);
-    @extend %img-rep;
-}
-
-.p-text-flat {
-    @include sprite($img-text-flat);
-    @extend %img-rep;
-}
-
-.p-text-sharp {
-    @include sprite($img-text-sharp);
-    @extend %img-rep;
-}
-
-.p-text-string {
-    @include sprite($img-text-string);
-    @extend %img-rep;
-}
-
-.p-icon-count-on {
-    @include sprite($icon-count-on);
-    @extend %img-rep;
-}
-
-.p-icon-count-off {
-    @include sprite($icon-count-off);
-    @extend %img-rep;
-}
-
-.p-btn-play {
-    @include sprite($btn-play);
-    cursor: pointer;
-    @extend %img-rep;
-}
-
-.p-btn-stop {
-    @include sprite($btn-stop);
-    cursor: pointer;
-    @extend %img-rep;
-}
-
-.layout-view {
-    padding: 0 30px;
-    width: 750px;
-    height: 730px;
-    position: absolute;
-    top: 245px;
-}
-
-.string-view {
-    width: 215px;
-    height: 144px;
-    position: relative;
-    display: flex;
-    .p-text-string {
-        position: absolute;
-        bottom: -9px;
-        right: 0;
+.page-lp-reborn01 {
+    img {
+        display: block;
+    }
+    .l-btn-registration {
+        width: responsiveX(140, 278);
+        display: block;
+        &:nth-of-type(1) {
+            margin-right: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .l-caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+        margin-bottom: 15px;
+        padding: 10px 0;
+        background-color: #e92377;
+        color: #fff;
+        font-size: 1.5rem;
+        line-height: 1.4;
+        &__small {
+            font-size: 1rem;
+        }
+        &__em {
+            font-size: 2rem;
+        }
+    }
+    .block-registration {
+        &.is-capture {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            display: block;
+            content: "";
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_top-min.png',
+                $position: 50% 0,
+                $repeat: repeat-x,
+                $width: 100%,
+                $pixelRatio: 2,
+                $bg-width: 640px,
+                $bg-height: 22px
+            );
+        }
+        &__inner {
+            box-sizing: border-box;
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_middle-min.png',
+                $position: 0 0,
+                $repeat: repeat,
+                $width: 100%,
+                $height: auto,
+                $pixelRatio: 2
+            );
+            background-size: 100% auto;
+            padding: 10px 0;
+        }
+        &:after {
+            display: block;
+            content: "";
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_bottom-min.png',
+                $position: 50% 0,
+                $repeat: repeat-x,
+                $width: 100%,
+                $pixelRatio: 2,
+                $bg-width: 640px,
+                $bg-height: 22px
+            );
+        }
+    }
+    .l-em {
+        color: #fe0000;
+    }
+    .l-notice {
+        margin: 0 14px 24px;
+        li {
+            text-indent: -1.0rem;
+            padding: 0 0 3px 10px;
+            line-height: 1.4;
+            font-size: 1.0rem;
+            color: #545454;
+        }
+    }
+    .l-to-top {
+        @include img-background(
+            $image: '../img/iqlp_reborn01_btn_lp_to_top-min.png',
+            $position: 0 0,
+            $repeat: no-repeat,
+            $pixelRatio: 2,
+            $bg-width: 210px,
+            $bg-height: 64px
+        );
+        margin: 0 auto;
+        padding: 7px 0 0 30px;
+        box-sizing: border-box;
+        display: block;
+        color: #545454;
+    }
+    .c-footer {
+        margin-top: 50px;
+        padding: 38px 10px 43px;
+        background-color: #e4e4e4;
+        color: #545454;
+        &__link-children {
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-right: #545454 solid 1px;
+            }
+        }
+        .c-text-link {
+            color: #545454;
+        }
     }
 }
 
-.counter-view {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-}
-
-.note-view {
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-}
-
-.btn-view {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-left: -33px;
-}
-
-// .note-cell {
-//     position: relative;
-//     &.is-next-note {
-//         margin-right: 20px;
-//         transform: scale(0.5);
-//         transform-origin: bottom;
-//     }
-//     .p-text-flat {
-//         position: absolute;
-//         &.is-layout-c,
-//         &.is-layout-e,
-//         &.is-layout-b {
-//             right: -73px;
-//         }
-//         &.is-layout-d {
-//             right: -58px;
-//         }
-//         &.is-layout-f {
-//             right: -80px;
-//         }
-//         &.is-layout-g {
-//             right: -60px;
-//         }
-//         &.is-layout-a {
-//             right: 0;
-//         }
-//         top: -115px;
-//     }
-//     .p-text-sharp {
-//         position: absolute;
-
-//         &.is-layout-b,
-//         &.is-layout-c {
-//             right: -85px;
-//         }
-//         &.is-layout-d {
-//             right: -76px;
-//         }
-//         &.is-layout-e {
-//             right: -108px;
-//         }
-//         &.is-layout-f {
-//             right: -116px;
-//         }
-//         &.is-layout-g {
-//             right: -80px;
-//         }
-//         &.is-layout-a {
-//             right: -30px;
-//         }
-//         top: -105px;
-//     }
-// }
+@import "helper";

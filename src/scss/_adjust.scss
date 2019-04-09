@@ -1,0 +1,26 @@
+[data-tap-action] {
+    pointer-events: auto;
+}
+
+.adj-page-padding-x {
+    padding: 0 responsiveX(13);
+}
+
+.adj-page-line-height {
+    line-height: $line-height-large;
+}
+
+.adj-title-bottom {
+    &.c-block-title {
+        margin-bottom: 16px;
+    }
+}
+
+.adj-icon-norton {
+    width: 65px;
+    height: 35px;
+    img {
+        width: 65px;
+        height: 35px;
+    }
+}

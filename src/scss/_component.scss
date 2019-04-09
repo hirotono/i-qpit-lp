@@ -1,0 +1,25 @@
+
+
+.c-footer {
+    padding: 38px 30px 43px;
+    background-color: $bg-color-footer;
+    color: $color-footer;
+    font-size: $font-size-footer;
+    text-align: center;
+    .c-footer__link {
+        margin: 0 0 8px;
+    }
+    .c-footer__link-children {
+        padding: 0 7px;
+        line-height: 2.0rem;
+        display: inline-block;
+        border-right: $color-footer solid 1px;
+        &:nth-child(2),
+        &:last-child {
+            border-right: none;
+        }
+    }
+    .c-text-link {
+        color: $color-footer;
+    }
+}

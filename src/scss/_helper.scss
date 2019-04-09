@@ -1,0 +1,188 @@
+.fs-b {
+    font-size: $font-size-base !important;
+}
+.fs-s {
+    font-size: $font-size-small !important;
+}
+.fs-l {
+    font-size: $font-size-large !important;
+}
+.fs-xl {
+    font-size: $font-size-x-large !important;
+}
+.fs-xxl {
+    font-size: $font-size-xx-large !important;
+}
+
+.op-0 {
+    opacity: 0;
+}
+
+.fc-base {color: $color-base !important;}
+.fc-light {color: $color-light !important;}
+.fc-em {color: $color-em !important;}
+.fc-notification {color: $color-notification !important}
+
+.bg-base {background-color: $bg-color-base !important;}
+.bg-light {background-color: $bg-color-light !important;}
+.bg-section-light2 {background-color: $bg-color-section-light2 !important;}
+
+.ta-l {text-align: left;}
+.ta-r {text-align: right;}
+.ta-c {text-align: center;}
+
+.fw-n {font-weight: normal !important;}
+.fw-b {font-weight: bold !important;}
+
+.td-u {text-decoration: underline;}
+
+.pe-n {pointer-events: none !important;}
+.pe-a {pointer-events: auto !important;}
+
+
+@for $i from 0 through 12 {
+    @if ($i == 1) {
+        .mt-b {
+            margin-top: $space-base* $i !important;
+        }
+    }
+    .mt-b#{$i} {
+        margin-top: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 12 {
+    @if ($i == 1) {
+        .mb-b {
+            margin-bottom: $space-base* $i !important;
+        }
+    }
+    .mb-b#{$i} {
+        margin-bottom: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 5 {
+    @if ($i == 1) {
+        .ml-b {
+            margin-left: $space-base* $i !important;
+        }
+    }
+    .ml-b#{$i} {
+        margin-left: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 5 {
+    @if ($i == 1) {
+        .mr-b {
+            margin-right: $space-base* $i !important;
+        }
+    }
+    .mr-b#{$i} {
+        margin-right: $space-base* $i !important;
+    }
+}
+
+.mr-a {margin-right: auto !important;}
+.ml-a {margin-left: auto !important;}
+.mlr-a {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.po-s {position: static !important;}
+.po-r {position: relative !important;}
+.po-a {position: absolute !important;}
+.po-f {position: fixed !important;}
+
+@for $i from 0 through 12 {
+    @if ($i == 1) {
+        .pt-b {
+            padding-top: $space-base* $i !important;
+        }
+    }
+    .pt-b#{$i} {
+        padding-top: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 12 {
+    @if ($i == 1) {
+        .pb-b {
+            padding-bottom: $space-base* $i !important;
+        }
+    }
+    .pb-b#{$i} {
+        padding-bottom: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 5 {
+    @if ($i == 1) {
+        .pl-b {
+            padding-left: $space-base* $i !important;
+        }
+    }
+    .pl-b#{$i} {
+        padding-left: $space-base* $i !important;
+    }
+}
+
+@for $i from 0 through 5 {
+    @if ($i == 1) {
+        .pr-b {
+            padding-right: $space-base* $i !important;
+        }
+    }
+    .pr-b#{$i} {
+        padding-right: $space-base* $i !important;
+    }
+}
+
+.di-f {
+    display: flex;
+}
+
+.box-c {
+    display: flex;
+    align-items: center;
+}
+
+.box-cc {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.box-cb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-rep {
+    overflow: hidden;
+    white-space: nowrap;
+    text-indent: 100%;
+}
+
+.di-n {display: none !important;}
+.di-i {display: inline !important;}
+.di-ib {display: inline-block !important;}
+.di-b {display: block !important;}
+
+@for $i from 0 through 10 {
+    .zi-#{$i} {
+        z-index: #{$i} !important;
+    }
+}
+
+.wb-ba {
+    word-break: break-all;
+}
+
+.img-full {
+    width: 100%;
+    display: block;
+}

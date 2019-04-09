@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <title></title>
+</head>
+
+<body>
+    <!-- headが変更できないためbodyから読み込む -->
+    <link rel="stylesheet" href="sema/css/site_base_new.css">
+    <!-- /headが変更できないためbodyから読み込む -->
+    <div id="app">
+        <template v-if="stage">
+            <h1>stage1</h1>
+
+            <button v-on:click="onMoveStageLeft" name="stage2_1">stage2-1</button>
+            <button v-on:click="onMoveStageRight" name="stage2_2">stage2-2</button>
+        </template>
+
+        <template v-if="stage2_1">
+            <h1>stage2-1</h1>
+        
+            <button v-on:click="onMoveStageLeft" name="stage3_1">stage3-1</button>
+            <button v-on:click="onMoveStageRight" name="stage3_2">stage3-2</button>
+        </template>
+
+        <template v-if="stage2_2">
+            <h1>stage2-2</h1>
+        
+            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
+            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
+        </template>
+
+        <template v-if="stage3_1">
+            <h1>stage3-1</h1>
+        
+            <button v-on:click="onMoveStageLeft" name="stage3_1">stage3-1</button>
+            <button v-on:click="onMoveStageRight" name="stage3_2">stage3-2</button>
+        </template>
+        
+        <template v-if="stage3_2">
+            <h1>stage3-2</h1>
+        
+            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
+            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
+        </template>
+
+        <template v-if="stage3_3">
+            <h1>stage3-3</h1>
+        
+            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
+            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
+        </template>
+    </div>
+    <div id="top" class="page-lp-reborn01">
+        <h1>
+            <img src="./img/i/iqlp_reborn02_img_lp_title_i_40-min.png" class="img-full" alt="">
+        </h1>
+        <div class="l-caption">
+            <p>
+                <span class="l-caption__em">毎月全国で<span class="fw-b">約3000組</span></span>
+            </p>
+            のカップルが誕生しています！
+        </div>
+        <div class="block-registration mb-b5">
+            <div class="block-registration__inner pl-b4 pr-b4">
+                <img src="./img/i/iqlp_reborn01_text_registration_info-min.png" class="mlr-a mb-b4" width="290" alt="">
+                <div class="box-cc mb-b4">
+                    <a class="l-btn-registration" href="mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_man_lp_registration-min.png" alt="18歳以上男性無料登録">
+                    </a>
+                    <a class="l-btn-registration" href="mailto:reg0@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_woman_lp_registration-min.png" alt="18歳以上女性無料登録">
+                    </a>
+                </div>
+                <p class="l-em fs-s box-cc mb-b3">
+                    ※折り返しのメールが届かないと思ったら<br>「迷惑メールフォルダ」をご確認ください。
+                </p>
+            </div>
+        </div>
+        <div class="mb-b2">
+            <img src="./img/i/iqlp_reborn02_img_lp_information_01_i_40-min.png" class="img-full" alt="">
+            <p class="fs-s ml-b3">※アンケート調査2018年1月～12月まで</p>
+        </div>
+        <div class="block-registration mb-b5">
+            <div class="block-registration__inner pl-b4 pr-b4">
+                <img src="./img/i/iqlp_reborn01_text_registration_info-min.png" class="mlr-a mb-b4" width="290" alt="">
+                <div class="box-cc mb-b4">
+                    <a class="l-btn-registration" href="mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_man_lp_registration-min.png" alt="18歳以上男性無料登録">
+                    </a>
+                    <a class="l-btn-registration" href="mailto:reg0@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_woman_lp_registration-min.png" alt="18歳以上女性無料登録">
+                    </a>
+                </div>
+                <p class="l-em fs-s box-cc mb-b3">
+                    ※折り返しのメールが届かないと思ったら<br>「迷惑メールフォルダ」をご確認ください。
+                </p>
+            </div>
+        </div>
+        <div class="mb-b2">
+            <img src="./img/i/iqlp_reborn02_img_lp_information_02_i_40-min.png" class="img-full" alt="">
+        </div>
+    
+        <div class="block-registration is-capture mb-b5">
+            <img src="./img/i/iqlp_reborn01_img_lp_ux_information-min.png" class="img-full" alt="">
+            <div class="block-registration__inner pt-b3 pl-b4 pr-b4">
+                <div class="box-cc mb-b4">
+                    <a class="l-btn-registration" href="mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_man_lp_registration-min.png" alt="18歳以上男性無料登録">
+                    </a>
+                    <a class="l-btn-registration" href="mailto:reg0@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_woman_lp_registration-min.png" alt="18歳以上女性無料登録">
+                    </a>
+                </div>
+                <p class="l-em fs-s box-cc mb-b3">
+                    ※折り返しのメールが届かないと思ったら<br>「迷惑メールフォルダ」をご確認ください。
+                </p>
+            </div>
+        </div>
+
+        <div class="mb-b6">
+            <img src="./img/i/iqlp_reborn02_img_lp_information_03_i_40-min.png" class="img-full mb-b3" alt="">
+            <ul class="l-notice">
+                <li>
+                    ※当サービスは結婚相手を探している方・募集している方のためのネット婚活サイトです。
+                </li>
+                <li>
+                    ※真剣に恋愛・結婚情報サービスをご希望される方のみを対象とし、既婚者・18歳未満・学生のご利用は禁止しています。
+                </li>
+                <li>
+                    ※当サービスでの交際により、金銭その他の対価を供与、享受することはありません。
+                </li>
+            </ul>
+        </div>
+        
+        <div class="block-registration mb-b5">
+            <div class="block-registration__inner pl-b4 pr-b4">
+                <img src="./img/i/iqlp_reborn01_text_registration_info-min.png" class="mlr-a mb-b4" width="290" alt="">
+                <div class="box-cc mb-b4">
+                    <a class="l-btn-registration" href="mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_man_lp_registration-min.png" alt="18歳以上男性無料登録">
+                    </a>
+                    <a class="l-btn-registration" href="mailto:reg0@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_woman_lp_registration-min.png" alt="18歳以上女性無料登録">
+                    </a>
+                </div>
+                <p class="l-em fs-s box-cc mb-b3">
+                    ※折り返しのメールが届かないと思ったら<br>「迷惑メールフォルダ」をご確認ください。
+                </p>
+            </div>
+        </div>
+        <div class="mb-b6">
+            <img src="./img/i/iqlp_reborn02_img_lp_information_04_i_40-min.png" class="img-full mb-b3" alt="">
+            <ul class="l-notice">
+                <li>
+                    ※当サービスにより集められた個人情報は、本ウェブサイトで提供するサービスをご利用いただく為のみに使用されます。
+                </li>
+                <li>
+                    ※登録時にご記入頂いたメールアドレス等の個人情報は、本人の了承が無い限り完全非公開です。ご安心してパートナーを探し　て頂くことができます。
+                </li>
+            </ul>
+        </div>
+    
+        <div class="block-registration mb-b5">
+            <div class="block-registration__inner pl-b4 pr-b4">
+                <img src="./img/i/iqlp_reborn01_text_registration_info-min.png" class="mlr-a mb-b4" width="290" alt="">
+                <div class="box-cc mb-b4">
+                    <a class="l-btn-registration" href="mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_man_lp_registration-min.png" alt="18歳以上男性無料登録">
+                    </a>
+                    <a class="l-btn-registration" href="mailto:reg0@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。">
+                        <img src="./img/i/iqlp_reborn01_btn_woman_lp_registration-min.png" alt="18歳以上女性無料登録">
+                    </a>
+                </div>
+                <p class="l-em fs-s box-cc mb-b3">
+                    ※折り返しのメールが届かないと思ったら<br>「迷惑メールフォルダ」をご確認ください。
+                </p>
+            </div>
+        </div>
+        <a href="#top" class="l-to-top">TOPへ戻る</a>
+        <footer class="c-footer">
+            <ul class="c-footer__link">
+                <li class="c-footer__link-children" data-tap-action>
+                    <a class="c-text-link" href="xN10URLx">
+                        ご利用規約
+                    </a>
+                </li>
+                <li class="c-footer__link-children" data-tap-action>
+                    <a class="c-text-link" href="xK1URLx">
+                        特定商取引法に基づく表示
+                    </a>
+                </li>
+                <li class="c-footer__link-children" data-tap-action>
+                    <a class="c-text-link" href="xN42URLx">
+                        会社概要
+                    </a>
+                </li>
+            </ul>
+            <p class="mb-b2">インターネット異性紹介事業 届出・認定済み<br>東京都公安委員会:第30150117000号 </p>
+            <small>
+                Copyright &copy; xDATEYx IWF. All Rights Reserved.
+            </small>
+        </footer>
+    </div>
+    <script src="sema/js/application.js"></script>
+</body>
+
+</html>

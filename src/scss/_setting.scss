@@ -1,0 +1,85 @@
+// sprite layout
+$sprites-layout: smart;
+
+
+$support-pixel-ratio: 2;
+
+// Path
+$image-path: '/img';
+
+// font size
+$font-size-base: 1.2rem;
+$font-size-small: $font-size-base - 0.2rem;
+// h3 15px相当
+$font-size-large: $font-size-base + 0.3rem;
+// h2 18px相当
+$font-size-x-large: $font-size-base + 0.6rem;
+// h1 23px相当
+$font-size-xx-large: $font-size-base + 1.1rem;
+
+$font-size-h1: $font-size-xx-large;
+$font-size-h2: $font-size-x-large;
+$font-size-h3: $font-size-large;
+$font-size-h4: $font-size-base;
+
+$font-size-lead: $font-size-large;
+$font-size-footer: $font-size-small;
+
+$line-height-large: 2rem;
+
+// global-header hight
+$hight-global-header: 55px;
+
+// Spaces
+$space-base: 4px;
+$page-top-space-base: $hight-global-header;//headerの高さ確保
+$page-title-bottom-space: 44px;
+
+// z-index
+$z-index-display-content: 2; 
+$z-index-display-content-overlay: 1; 
+
+// color
+$color-base: #000;
+$color-light: #fff;
+$color-gold: #9e8e4c;
+$color-em: #fb0078;
+$color-notification: #a5a5a5;
+$color-h1: #d77f85;
+$color-h2: $color-gold;
+$color-h3: $color-gold;
+$color-h4: $color-gold;
+$color-footer: $color-gold;
+$color-disable: #ccc;
+$color-deep-pink: #d77f85;
+$color-text-link: #80b6bb;
+
+$bg-color-header: #f7d9db;
+$bg-color-header-nav: #fdd8db;
+$bg-color-footer: #fee9eb;
+$bg-color-deep-pink: #d77f85;
+$bg-color-base: #000;
+$bg-color-light: #fff;
+$bg-color-gold: #c2b581;
+$bg-color-section-light1: #fee9eb; // 薄いピンク
+$bg-color-section-light2: #e7e1cd; // ベージュ
+$bg-color-section-light3: #e9f4f5; // 薄いブルー
+$bg-color-section-light4: #f7f5f6; // 薄いブルー
+
+$border-color-gold: #c2b581;
+
+// 変数名仮
+$bg-color-section-lead-on-bg: #e60777; // 濃いピンク
+
+// z-index
+$z-index:(
+    registration: 5,
+    img-balloon: 4,
+    lead-on-bg: 3,
+    main-nav: 2,
+    bg-top-main-filter: 1
+);
+
+$breakpoints: (
+  'ls': 'screen and (min-width: 400px)'
+) !default;

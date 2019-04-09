@@ -1,4 +1,69 @@
-ul {
+@charset "UTF-8";
+/* reset */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video,
+button, input[type=submit], input[type=button] {
     margin: 0;
     padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+img {
+    vertical-align: bottom;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+ol, ul {list-style: none;}
+
+
+/* default styles */
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+body {
+    font-size: $font-size-base;
+    font-family: ArialMT, "Hiragino Maru Gothic ProN", "ヒラギノ丸ゴ ProN W4", "メイリオ", sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+    height: 100%;
+    line-height: 1.8;
+    // CMSの影響がある為カスケーディング
+    letter-spacing: normal !important;
+}
+
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+small {font-size: 1.0rem;}
+mark {background-color: transparent;}
+
+a:not([href]) {
+    color: #999;
+}
+
+a {
+    text-decoration: none;
+}
+
+// CMSの影響がある為カスケーディング
+#frame {
+    width: auto !important;
+    margin: 0 !important;
 }
