@@ -50,7 +50,8 @@ const vm = new Vue({
             result2: false, // 亭主関白
             result3: false, // 恋愛情熱家
             result4: false, // ヤンデレ
-            stage_number: '1'
+            stage_number: '1',
+            resultNum: 0
         }
     },
     methods: {
@@ -73,6 +74,12 @@ const vm = new Vue({
             this.name = e.target.name;
             this.$data[this.name] = true;
         },
+        getRandomInt: function(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+    },
+    mounted() {
+        this.resultNum = this.getRandomInt(9);
     }
 });
 
