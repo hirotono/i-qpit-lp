@@ -8,14 +8,14 @@ $support-pixel-ratio: 2;
 $image-path: '/img';
 
 // font size
-$font-size-base: 1.2rem;
-$font-size-small: $font-size-base - 0.2rem;
+$font-size-base: 2.4rem;
+$font-size-small: $font-size-base - 0.4rem;
 // h3 15px相当
-$font-size-large: $font-size-base + 0.3rem;
+$font-size-large: $font-size-base + 0.6rem;
 // h2 18px相当
-$font-size-x-large: $font-size-base + 0.6rem;
+$font-size-x-large: $font-size-base + 1.2rem;
 // h1 23px相当
-$font-size-xx-large: $font-size-base + 1.1rem;
+$font-size-xx-large: $font-size-base + 2.2rem;
 
 $font-size-h1: $font-size-xx-large;
 $font-size-h2: $font-size-x-large;

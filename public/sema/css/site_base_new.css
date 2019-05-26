@@ -37,7 +37,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-size: 1.2rem;
+  font-size: 2.4rem;
   font-family: ArialMT, "Hiragino Maru Gothic ProN", "\30D2\30E9\30AE\30CE\4E38\30B4   ProN W4", "\30E1\30A4\30EA\30AA", sans-serif;
   -webkit-text-size-adjust: none;
   -webkit-touch-callout: none;
@@ -59,7 +59,7 @@ del {
   text-decoration: line-through; }
 
 small {
-  font-size: 1.0rem; }
+  font-size: 2.0rem; }
 
 mark {
   background-color: transparent; }
@@ -78,7 +78,7 @@ a {
   padding: 38px 30px 43px;
   background-color: #fee9eb;
   color: #9e8e4c;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center; }
   .c-footer .c-footer__link {
     margin: 0 0 8px; }
@@ -111,130 +111,234 @@ a {
     width: 65px;
     height: 35px; }
 
-.page-lp-reborn01 img {
-  display: block; }
+.page-lp-reborn01 {
+  padding-top: 900px; }
+  .page-lp-reborn01 img {
+    display: block; }
+  .page-lp-reborn01 .l-btn-registration {
+    width: responsiveX(140, 278);
+    display: block; }
+    .page-lp-reborn01 .l-btn-registration:nth-of-type(1) {
+      margin-right: 10px; }
+    .page-lp-reborn01 .l-btn-registration img {
+      width: 100%; }
+  .page-lp-reborn01 .l-caption {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    background-color: #e92377;
+    color: #fff;
+    font-size: 3rem;
+    line-height: 1.4; }
+    .page-lp-reborn01 .l-caption__small {
+      font-size: 2rem; }
+    .page-lp-reborn01 .l-caption__em {
+      font-size: 4rem; }
+  .page-lp-reborn01 .block-registration.is-capture:before {
+    display: none; }
+  .page-lp-reborn01 .block-registration:before {
+    display: block;
+    content: "";
+    background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_top-min.png);
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-size: 320px 11px;
+    width: 100%;
+    height: 11px; }
+  .page-lp-reborn01 .block-registration__inner {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_middle-min.png);
+    background-position: 0 0;
+    background-repeat: repeat;
+    width: 100%;
+    height: auto;
+    background-size: 100% auto;
+    padding: 10px 0; }
+  .page-lp-reborn01 .block-registration:after {
+    display: block;
+    content: "";
+    background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_bottom-min.png);
+    background-position: 50% 0;
+    background-repeat: repeat-x;
+    background-size: 320px 11px;
+    width: 100%;
+    height: 11px; }
+  .page-lp-reborn01 .l-em {
+    color: #fe0000; }
+  .page-lp-reborn01 .l-notice {
+    margin: 0 28px 48px; }
+    .page-lp-reborn01 .l-notice li {
+      text-indent: -2.0rem;
+      padding: 0 0 6px 20px;
+      line-height: 1.4;
+      font-size: 2.0rem;
+      color: #545454; }
+  .page-lp-reborn01 .l-to-top {
+    background-image: url(../../img/i/iqlp_reborn01_btn_lp_to_top-min.png);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 105px 32px;
+    width: 105px;
+    height: 32px;
+    margin: 0 auto;
+    padding: 7px 0 0 30px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: block;
+    color: #545454; }
+  .page-lp-reborn01 .c-footer {
+    margin-top: 50px;
+    padding: 38px 10px 43px;
+    background-color: #e4e4e4;
+    color: #545454; }
+    .page-lp-reborn01 .c-footer__link-children:nth-child(1), .page-lp-reborn01 .c-footer__link-children:nth-child(2) {
+      border-right: #545454 solid 1px; }
+    .page-lp-reborn01 .c-footer .c-text-link {
+      color: #545454; }
 
-.page-lp-reborn01 .l-btn-registration {
-  width: responsiveX(140, 278);
-  display: block; }
-  .page-lp-reborn01 .l-btn-registration:nth-of-type(1) {
-    margin-right: 10px; }
-  .page-lp-reborn01 .l-btn-registration img {
+.page-top-start {
+  position: relative;
+  height: 100%; }
+  .page-top-start .top-text {
+    position: absolute;
+    bottom: 172px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%; }
+  .page-top-start .bg-diagnosis {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0; }
+  .page-top-start .btn-diagnosis {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -300px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 600px; }
+    .page-top-start .btn-diagnosis img {
+      width: 100%;
+      height: 100%; }
 
-.page-lp-reborn01 .l-caption {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-bottom: 15px;
-  padding: 10px 0;
-  background-color: #e92377;
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 1.4; }
-  .page-lp-reborn01 .l-caption__small {
-    font-size: 1rem; }
-  .page-lp-reborn01 .l-caption__em {
-    font-size: 2rem; }
+.page-stage {
+  position: absolute;
+  height: 900px; }
+  .page-stage .header {
+    background: url(../../img/i/header-min.png) no-repeat;
+    width: 640px;
+    height: 88px;
+    color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    z-index: 2; }
+  .page-stage .bg {
+    background: url(../../img/i/bg-diagnosis-question-min.png) no-repeat;
+    min-height: 900px;
+    width: 640px; }
+  .page-stage .btn-no {
+    background: url(../../img/i/btn-no-min.png) no-repeat;
+    width: 211px;
+    height: 88px;
+    color: rgba(0, 0, 0, 0); }
+  .page-stage .btn-yes {
+    background: url(../../img/i/btn-yes-min.png) no-repeat;
+    width: 211px;
+    height: 88px;
+    color: rgba(0, 0, 0, 0); }
+  .page-stage .diagnosis-box {
+    background: url(../../img/i/bg-diagnosis-box-min.png) no-repeat;
+    width: 587px;
+    height: 444px;
+    color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 314px;
+    left: 50%;
+    margin-left: -294px; }
+    .page-stage .diagnosis-box .navigation {
+      position: absolute;
+      top: 272px;
+      left: 50%;
+      margin-left: -224px;
+      width: 448px;
+      height: 90px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
 
-.page-lp-reborn01 .block-registration.is-capture:before {
-  display: none; }
+.fade-enter {
+  /*開始の状態を指定する*/
+  opacity: 0; }
 
-.page-lp-reborn01 .block-registration:before {
-  display: block;
-  content: "";
-  background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_top-min.png);
-  background-position: 50% 0;
-  background-repeat: repeat-x;
-  background-size: 320px 11px;
-  width: 100%;
-  height: 11px; }
+.fade-enter-to {
+  /*終了の状態を指定する*/
+  opacity: 1; }
 
-.page-lp-reborn01 .block-registration__inner {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_middle-min.png);
-  background-position: 0 0;
-  background-repeat: repeat;
-  width: 100%;
-  height: auto;
-  background-size: 100% auto;
-  padding: 10px 0; }
+.fade-leave {
+  opacity: 1; }
 
-.page-lp-reborn01 .block-registration:after {
-  display: block;
-  content: "";
-  background-image: url(../../img/i/iqlp_reborn01_bg_text_registration_bottom-min.png);
-  background-position: 50% 0;
-  background-repeat: repeat-x;
-  background-size: 320px 11px;
-  width: 100%;
-  height: 11px; }
+.fade-leave-to {
+  opacity: 0; }
 
-.page-lp-reborn01 .l-em {
-  color: #fe0000; }
+.fade-enter-active {
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  -webkit-transition-delay: .3s;
+          transition-delay: .3s; }
 
-.page-lp-reborn01 .l-notice {
-  margin: 0 14px 24px; }
-  .page-lp-reborn01 .l-notice li {
-    text-indent: -1.0rem;
-    padding: 0 0 3px 10px;
-    line-height: 1.4;
-    font-size: 1.0rem;
-    color: #545454; }
-
-.page-lp-reborn01 .l-to-top {
-  background-image: url(../../img/i/iqlp_reborn01_btn_lp_to_top-min.png);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: 105px 32px;
-  width: 105px;
-  height: 32px;
-  margin: 0 auto;
-  padding: 7px 0 0 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: block;
-  color: #545454; }
-
-.page-lp-reborn01 .c-footer {
-  margin-top: 50px;
-  padding: 38px 10px 43px;
-  background-color: #e4e4e4;
-  color: #545454; }
-  .page-lp-reborn01 .c-footer__link-children:nth-child(1), .page-lp-reborn01 .c-footer__link-children:nth-child(2) {
-    border-right: #545454 solid 1px; }
-  .page-lp-reborn01 .c-footer .c-text-link {
-    color: #545454; }
+.fade-leave-active {
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s; }
 
 .fs-b {
-  font-size: 1.2rem !important; }
+  font-size: 2.4rem !important; }
 
 .fs-s {
-  font-size: 1rem !important; }
+  font-size: 2rem !important; }
 
 .fs-l {
-  font-size: 1.5rem !important; }
+  font-size: 3rem !important; }
 
 .fs-xl {
-  font-size: 1.8rem !important; }
+  font-size: 3.6rem !important; }
 
 .fs-xxl {
-  font-size: 2.3rem !important; }
+  font-size: 4.6rem !important; }
 
 .op-0 {
   opacity: 0; }

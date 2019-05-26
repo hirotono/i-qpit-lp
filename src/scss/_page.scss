@@ -1,0 +1,529 @@
+//==========================================
+//
+// LP
+//
+//==========================================
+
+.page-lp-reborn01 {
+    img {
+        display: block;
+    }
+    .l-btn-registration {
+        width: responsiveX(140, 278);
+        display: block;
+        &:nth-of-type(1) {
+            margin-right: 10px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .l-caption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction:column;
+        margin-bottom: 15px;
+        padding: 10px 0;
+        background-color: #e92377;
+        color: #fff;
+        font-size: 3rem;
+        line-height: 1.4;
+        &__small {
+            font-size: 2rem;
+        }
+        &__em {
+            font-size: 4rem;
+        }
+    }
+    .block-registration {
+        &.is-capture {
+            &:before {
+                display: none;
+            }
+        }
+        &:before {
+            display: block;
+            content: "";
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_top-min.png',
+                $position: 50% 0,
+                $repeat: repeat-x,
+                $width: 100%,
+                $pixelRatio: 1,
+                $bg-width: 640px,
+                $bg-height: 22px
+            );
+        }
+        &__inner {
+            box-sizing: border-box;
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_middle-min.png',
+                $position: 0 0,
+                $repeat: repeat,
+                $width: 100%,
+                $height: auto,
+                $pixelRatio: 2
+            );
+            background-size: 100% auto;
+            padding: 10px 0;
+        }
+        &:after {
+            display: block;
+            content: "";
+            @include img-background(
+                $image: '../img/iqlp_reborn01_bg_text_registration_bottom-min.png',
+                $position: 50% 0,
+                $repeat: repeat-x,
+                $width: 100%,
+                $pixelRatio: 1,
+                $bg-width: 640px,
+                $bg-height: 22px
+            );
+        }
+    }
+    .l-em {
+        color: #fe0000;
+    }
+    .l-notice {
+        margin: 0 28px 48px;
+        li {
+            text-indent: -2.0rem;
+            padding: 0 0 6px 20px;
+            line-height: 1.4;
+            font-size: 2.0rem;
+            color: #545454;
+        }
+    }
+
+    .l-to-top {
+        @include img-background(
+            $image: '../img/iqlp_reborn01_btn_lp_to_top-min.png',
+            $position: 0 0,
+            $repeat: no-repeat,
+            $pixelRatio: 1,
+            $bg-width: 210px,
+            $bg-height: 64px
+        );
+        margin: 0 auto;
+        padding: 10px 0 0 57px;
+        box-sizing: border-box;
+        display: block;
+        color: #545454;
+    }
+    .c-footer {
+        margin-top: 50px;
+        padding: 38px 10px 43px;
+        background-color: #e4e4e4;
+        color: #545454;
+        &__link-children {
+            &:nth-child(1),
+            &:nth-child(2) {
+                border-right: #545454 solid 1px;
+            }
+        }
+        .c-text-link {
+            color: #545454;
+        }
+    }
+}
+
+.content-box {
+    position: relative;
+    height: 1136px;
+}
+
+.page-top-start {
+    position: absolute;
+    .top-text {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .diagnosis {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+    }
+    .btn-diagnosis {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        width: 600px;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .c-btn-skip {
+        position: absolute;
+        bottom: -95px;
+        left: 50%;
+        margin-left: -118px;
+    }
+}
+
+.page-stage {
+    position: absolute;
+    height: 1136px;
+    .c-btn-skip {
+        position: absolute;
+        bottom: 264px;
+        left: 50%;
+        margin-left: -118px;
+    }
+    .q1 {
+        background: url('../img/text-q1-min.png') no-repeat;
+        width: 75px;
+        height: 52px;
+        position: absolute;
+        top: 42px;
+        left: 50%;
+        margin-left: -38px;
+    }
+    .q2 {
+        background: url('../img/text-q2-min.png') no-repeat;
+        width: 76px;
+        height: 51px;
+        position: absolute;
+        top: 42px;
+        left: 50%;
+        margin-left: -38px;
+    }
+    .q3 {
+        background: url('../img/text-q3-min.png') no-repeat;
+        width: 77px;
+        height: 51px;
+        position: absolute;
+        top: 42px;
+        left: 50%;
+        margin-left: -38px;
+    }
+    .header {
+        background: url('../img/header-min.png') no-repeat;
+        width: 640px;
+        height: 88px;
+        color: rgba($color: #000, $alpha: 0);
+        position: absolute;
+        top:0;
+        z-index: 2;
+    }
+    .bg {
+        background: url('../img/bg-diagnosis-question-min.png') no-repeat;
+        min-height: 900px;
+        width: 640px;
+    }
+    .btn-no {
+        background: url('../img/btn-no-min.png') no-repeat;
+        width: 211px;
+        height: 88px;
+        color: rgba($color: #000, $alpha: 0);
+    }
+    .btn-yes {
+        background: url('../img/btn-yes-min.png') no-repeat;
+        width: 211px;
+        height: 88px;
+        color: rgba($color: #000, $alpha: 0);
+    }
+    .diagnosis-box {
+        background: url('../img/bg-diagnosis-box-min.png') no-repeat;
+        width: 587px;
+        height: 444px;
+        position: absolute;
+        top: 314px;
+        left: 50%;
+        margin-left: -294px;
+        .navigation {
+            position: absolute;
+            top:272px;
+            left: 50%;
+            margin-left : -224px;
+            width: 448px;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+        }
+        p {
+            position: absolute;
+            top: 136px;
+            width: 500px;
+            height: 80px;
+            left: 50%;
+            margin-left: -250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.page-result {
+    position: absolute;
+    height: 1136px;
+    .c-btn-skip {
+        position: absolute;
+        bottom: 264px;
+        left: 50%;
+        margin-left: -118px;
+    }
+    .title {
+        background: url('../img/text-result-min.png') no-repeat;
+        width: 326px;
+        height: 69px;
+        position: absolute;
+        top: 42px;
+        left: 50%;
+        margin-left: -163px;
+    }
+    .header {
+        background: url('../img/header-min.png') no-repeat;
+        width: 640px;
+        height: 88px;
+        color: rgba($color: #000, $alpha: 0);
+        position: absolute;
+        top:0;
+        z-index: 2;
+    }
+    .bg {
+        background: url('../img/bg-result-min.png') no-repeat;
+        height: 1136px;
+        width: 640px;
+    }
+    .registration {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        height: 106px;
+    }
+    .result-view {
+        width: 640px;
+        height: 446px;
+        position: absolute;
+        top: 508px;
+        .p1 {
+            color: #fff;
+            text-align: center;
+            font-size: 26px;
+        }
+        .p2 {
+            font-size: 26px;
+            text-align: center;
+            em {
+                font-size: 36px;
+                font-weight: bold;
+            }
+        }
+        .p3 {
+            text-align: center;
+            font-size: 26px;
+        }
+        .view-num {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            [class^="no"] {
+                margin: 0 5px;
+            }
+        }
+        .view-list {
+            position: relative;
+            height: 143px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            li {
+                flex: auto 0 0;
+                margin: 0 -10px;
+                &:nth-child(4) {
+                    z-index: 4;
+                }
+                &:nth-child(3),
+                &:nth-child(5) {
+                    z-index: 3;
+                }
+                &:nth-child(2),
+                &:nth-child(6) {
+                    z-index: 2;
+                }
+                &:nth-child(1),
+                &:nth-child(7) {
+                    z-index: 1;
+                }
+            }
+        }
+    }
+    .no1 {
+        background: url('../img/1-min.png') no-repeat;
+        width: 51px;
+        height: 127px;
+    }
+    .no2 {
+        background: url('../img/2-min.png') no-repeat;
+        width: 89px;
+        height: 130px;
+    }
+    .no3 {
+        background: url('../img/3-min.png') no-repeat;
+        width: 88px;
+        height: 133px;
+    }
+    .no4 {
+        background: url('../img/4-min.png') no-repeat;
+        width: 92px;
+        height: 130px;
+    }
+    .no5 {
+        background: url('../img/5-min.png') no-repeat;
+        width: 87px;
+        height: 130px;
+    }
+    .no6 {
+        background: url('../img/6-min.png') no-repeat;
+        width: 81px;
+        height: 133px;
+    }
+    .no7 {
+        background: url('../img/7-min.png') no-repeat;
+        width: 84px;
+        height: 130px;
+    }
+    .no8 {
+        background: url('../img/8-min.png') no-repeat;
+        width: 89px;
+        height: 133px;
+    }
+    .no9 {
+        background: url('../img/9-min.png') no-repeat;
+        width: 81px;
+        height: 133px;
+    }
+    .photo1 {
+        background: url('../img/photo1-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo2 {
+        background: url('../img/photo2-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo3 {
+        background: url('../img/photo3-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo4 {
+        background: url('../img/photo4-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo5 {
+        background: url('../img/photo5-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo6 {
+        background: url('../img/photo6-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo7 {
+        background: url('../img/photo7-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo8 {
+        background: url('../img/photo8-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo9 {
+        background: url('../img/photo9-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .photo10 {
+        background: url('../img/photo10-min.png') no-repeat;
+        width: 105px;
+        height: 105px;
+    }
+    .text-registration {
+        background: url('../img/balloon-min.png') no-repeat;
+        width: 128px;
+        height: 89px;
+        color: rgba($color: #000, $alpha: 0);
+        position: absolute;
+        top: -92px;
+        left: 30px;
+        z-index: 1;
+    }
+    .btn-registration {
+        display: block;
+        background: url('../img/btn-registration-min.png') no-repeat;
+        width: 548px;
+        height: 106px;
+        color: rgba($color: #000, $alpha: 0);
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        margin-left: -274px;
+    }
+    .diagnosis-box {
+        background: url('../img/bg-result-diagnosis-box-min.png') no-repeat;
+        width: 587px;
+        height: 382px;
+        position: absolute;
+        top: 107px;
+        left: 50%;
+        margin-left: -294px;
+        .text-box {
+            width: 460px;
+            position: absolute;
+            top: 126px;
+            left: 50%;
+            margin-left: -230px;
+        }
+        .p-text {
+            width: 460px;
+            display: flex;
+            justify-content: center;
+            font-size: 26px;
+            line-height: 145%;
+        }
+        .p-type {
+            width: 460px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: #e95a6c;
+            margin-bottom: 18px;
+            line-height: 36px;
+        }
+    }
+}
+
+
+.fade-enter {
+/*開始の状態を指定する*/
+opacity: 0;
+}
+.fade-enter-to {
+/*終了の状態を指定する*/
+opacity: 1;
+}
+.fade-leave {
+opacity: 1;
+}
+.fade-leave-to {
+opacity: 0;
+}
+
+.fade-enter-active{
+    transition: opacity .4s;
+    transition-delay: .3s;
+}
+.fade-leave-active {
+    transition: opacity .4s;
+}

@@ -3,56 +3,355 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no" />
+    <meta name="viewport" content="width=640, user-scalable=no" />
     <title></title>
 </head>
 
 <body>
     <!-- headが変更できないためbodyから読み込む -->
-    <link rel="stylesheet" href="sema/css/site_base_new.css">
+    <link rel="stylesheet" href="sema/css/lp.css">
     <!-- /headが変更できないためbodyから読み込む -->
+
     <div id="app">
-        <template v-if="stage">
-            <h1>stage1</h1>
+        <div class="content-box">
+            <start-view :show="start">
+                <script type="text/x-template" id="start-view">
+                    <transition name="fade">
+                        <div class="page-top-start" v-if="show">
+                            <img src="./img/i/img-top-min.png" class="img-full" alt="">
+                            <div class="diagnosis">
+                                <p class="top-text">簡単な診断であなたの理想の相手がわかる！</p>
+                                <div class="btn-diagnosis" v-on:click="onMoveStageStart">
+                                    <img src="./img/i/btn-diagnosis-min.png" alt="">
+                                </div>
+                            </div>
+                            <div class="c-btn-skip"></div>
+                        </div>
+                    </transition>
+                </script>
+            </start-view>
+            
+            <stage :show="stage">
+                <script type="text/x-template" id="stage">
+                    <transition name="fade">
+                        <div class="page-stage" v-if="show">
+                            <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                            <div class="bg">
+                                <div class="diagnosis-box">
+                                    <h1 class="q1"></h1>
+                                    <p>告白は自分からしたい</p>
+                                    <div class="navigation">
+                                        <button class="btn-no" v-on:click="onMoveStageLeft" name="stage2_2"></button>
+                                        <button class="btn-yes" v-on:click="onMoveStageRight" name="stage2_1"></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-btn-skip"></div>
+                        </div>
+                    </transition>
+                </script>
+            </stage>
+            <transition name="fade">
+                <div class="page-stage" v-if="stage2_1">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="q2"></h1>
+                            <p>好きな人には尽くしたい</p>
+                            <div class="navigation">
+                                <button class="btn-no" v-on:click="onMoveStageLeft" name="stage3_2"></button>
+                                <button class="btn-yes" v-on:click="onMoveStageRight" name="stage3_1"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-btn-skip"></div>
+                </div>
+            </transition>
+            <transition name="fade">
+                <div class="page-stage" v-if="stage2_2">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="q2"></h1>
+                            <p>興味を持ったことには徹底的に</p>
+                            <div class="navigation">
+                                <button class="btn-no" v-on:click="onMoveStageLeft" name="stage3_3"></button>
+                                <button class="btn-yes" v-on:click="onMoveStageRight" name="stage3_2"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-btn-skip"></div>
+                </div>
+            </transition>
 
-            <button v-on:click="onMoveStageLeft" name="stage2_1">stage2-1</button>
-            <button v-on:click="onMoveStageRight" name="stage2_2">stage2-2</button>
-        </template>
+            <transition name="fade">
+                <div class="page-stage" v-if="stage3_1">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="q3"></h1>
+                            <p>いろいろ任せたい方だ</p>
+                            <div class="navigation">
+                                <button class="btn-no" v-on:click="onMoveStageLeft" name="result2"></button>
+                                <button class="btn-yes" v-on:click="onMoveStageRight" name="result1"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-btn-skip"></div>
+                </div>
+            </transition>
+            
+            <transition name="fade">
+                <div class="page-stage" v-if="stage3_2">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="q3"></h1>
+                            <p>友達を大切にしている</p>
+                            <div class="navigation">
+                                <button class="btn-no" v-on:click="onMoveStageLeft" name="result3"></button>
+                                <button class="btn-yes" v-on:click="onMoveStageRight" name="result2"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-btn-skip"></div>
+                </div>
+            </transition>
 
-        <template v-if="stage2_1">
-            <h1>stage2-1</h1>
-        
-            <button v-on:click="onMoveStageLeft" name="stage3_1">stage3-1</button>
-            <button v-on:click="onMoveStageRight" name="stage3_2">stage3-2</button>
-        </template>
+            <transition name="fade">
+                <div class="page-stage" v-if="stage3_3">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="q3"></h1>
+                            <p>人見知りしないタイプだ</p>
+                            <div class="navigation">
+                                <button class="btn-no" v-on:click="onMoveStageLeft" name="result4"></button>
+                                <button class="btn-yes" v-on:click="onMoveStageRight" name="result3"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-btn-skip"></div>
+                </div>
+            </transition>
 
-        <template v-if="stage2_2">
-            <h1>stage2-2</h1>
-        
-            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
-            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
-        </template>
+            <transition name="fade">
+                <div class="page-result" v-if="result1">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="title"></h1>
+                            <div class="text-box">
+                                <p class="p-text">
+                                    あなたは
+                                </p>
+                                <p class="p-type">
+                                    甘えたがりタイプ
+                                </p>
+                                <p class="p-text">
+                                    沢山甘えさせてくれて、自分を手の上で転がしてくれるような女性を求めています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-view">
+                        <p class="p1">
+                                そんなあなたにマッチした女性が...
+                        </p>
+                        <ul class="view-list">
+                            <li class="photo4"></li>
+                            <li class="photo5"></li>
+                            <li class="photo6"></li>
+                            <li class="photo9"></li>
+                            <li class="photo8"></li>
+                            <li class="photo7"></li>
+                            <li class="photo10"></li>
+                        </ul>
+                        <p class="p2">
+                                <em>アイキューピット</em>登録者の中に
+                        </p>
+                        <div class="view-num">
+                            <div class="no3"></div>
+                            <div class="no8"></div>
+                            <div class="no9"></div>
+                            <div class="no1"></div>
+                            <div class="no7"></div>
+                            <div>人</div>
+                        </div>
+                        <p class="p3">
+                                の女性が見つかりました！
+                        </p>
+                    </div>
+                    <div class="registration">
+                        <div class="text-registration"></div>
+                        <a href= "mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。" class="btn-registration"></a>
+                    </div>
+                </div>
+            </transition>
 
-        <template v-if="stage3_1">
-            <h1>stage3-1</h1>
-        
-            <button v-on:click="onMoveStageLeft" name="stage3_1">stage3-1</button>
-            <button v-on:click="onMoveStageRight" name="stage3_2">stage3-2</button>
-        </template>
-        
-        <template v-if="stage3_2">
-            <h1>stage3-2</h1>
-        
-            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
-            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
-        </template>
+            <transition name="fade">
+                <div class="page-result" v-if="result2">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="title"></h1>
+                            <div class="text-box">
+                                <p class="p-text">
+                                    あなたは
+                                </p>
+                                <p class="p-type">
+                                    亭主関白タイプ
+                                </p>
+                                <p class="p-text">
+                                    家庭をしっかり守り、癒しを与えてくれる女性を求めています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-view">
+                        <p class="p1">
+                                そんなあなたにマッチした女性が...
+                        </p>
+                        <ul class="view-list">
+                            <li class="photo2"></li>
+                            <li class="photo3"></li>
+                            <li class="photo4"></li>
+                            <li class="photo5"></li>
+                            <li class="photo6"></li>
+                            <li class="photo7"></li>
+                            <li class="photo8"></li>
+                        </ul>
+                        <p class="p2">
+                                <em>アイキューピット</em>登録者の中に
+                        </p>
+                        <div class="view-num">
+                            <div class="no5"></div>
+                            <div class="no1"></div>
+                            <div class="no1"></div>
+                            <div class="no8"></div>
+                            <div class="no4"></div>
+                            <div>人</div>
+                        </div>
+                        <p class="p3">
+                                の女性が見つかりました！
+                        </p>
+                    </div>
+                    <div class="registration">
+                        <div class="text-registration"></div>
+                        <a href= "mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。" class="btn-registration"></a>
+                    </div>
+                </div>
+            </transition>
 
-        <template v-if="stage3_3">
-            <h1>stage3-3</h1>
-        
-            <button v-on:click="onMoveStageLeft" name="stage3_2">stage3-2</button>
-            <button v-on:click="onMoveStageRight" name="stage3_3">stage3-3</button>
-        </template>
+            <transition name="fade">
+                <div class="page-result" v-if="result3">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="title"></h1>
+                            <div class="text-box">
+                                <p class="p-text">
+                                    あなたは
+                                </p>
+                                <p class="p-type">
+                                    恋愛情熱家タイプ
+                                </p>
+                                <p class="p-text">
+                                    沢山の女性と出会い、まだ見ぬ刺激的なコミュニケーションを求めています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-view">
+                        <p class="p1">
+                                そんなあなたにマッチした女性が...
+                        </p>
+                        <ul class="view-list">
+                            <li class="photo1"></li>
+                            <li class="photo4"></li>
+                            <li class="photo5"></li>
+                            <li class="photo2"></li>
+                            <li class="photo7"></li>
+                            <li class="photo8"></li>
+                            <li class="photo10"></li>
+                        </ul>
+                        <p class="p2">
+                                <em>アイキューピット</em>登録者の中に
+                        </p>
+                        <div class="view-num">
+                            <div class="no7"></div>
+                            <div class="no1"></div>
+                            <div class="no6"></div>
+                            <div class="no8"></div>
+                            <div class="no2"></div>
+                            <div>人</div>
+                        </div>
+                        <p class="p3">
+                                の女性が見つかりました！
+                        </p>
+                    </div>
+                    <div class="registration">
+                        <div class="text-registration"></div>
+                        <a href= "mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。" class="btn-registration"></a>
+                    </div>
+                </div>
+            </transition>
+
+            <transition name="fade">
+                <div class="page-result" v-if="result4">
+                    <h1 class="header">あなたの探してる相手はここにいます！</h1>
+                    <div class="bg">
+                        <div class="diagnosis-box">
+                            <h1 class="title"></h1>
+                            <div class="text-box">
+                                <p class="p-text">
+                                    あなたは
+                                </p>
+                                <p class="p-type">
+                                    ヤンデレタイプ
+                                </p>
+                                <p class="p-text">
+                                    まだまだ世間を知らず、見ていてほっておけない少女のような女性を求めています。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-view">
+                        <p class="p1">
+                                そんなあなたにマッチした女性が...
+                        </p>
+                        <ul class="view-list">
+                            <li class="photo6"></li>
+                            <li class="photo5"></li>
+                            <li class="photo3"></li>
+                            <li class="photo1"></li>
+                            <li class="photo2"></li>
+                            <li class="photo4"></li>
+                            <li class="photo7"></li>
+                        </ul>
+                        <p class="p2">
+                                <em>アイキューピット</em>登録者の中に
+                        </p>
+                        <div class="view-num">
+                            <div class="no3"></div>
+                            <div class="no4"></div>
+                            <div class="no9"></div>
+                            <div class="no1"></div>
+                            <div class="no1"></div>
+                            <div>人</div>
+                        </div>
+                        <p class="p3">
+                                の女性が見つかりました！
+                        </p>
+                    </div>
+                    <div class="registration">
+                        <div class="text-registration"></div>
+                        <a href= "mailto:reg1@DOMAINNAME?subject=chance%3A[BCODE]%3Aafcd%3A[afcd]%3A&body=Yahooメールアドレスを推奨しております。%0d%0a%0d%0a本メール送信後、確認メールが返信されますので、そちらから本登録へのお手続きをお願い致します。%0d%0a%0d%0a※返信が届かない場合は迷惑メールフォルダをご確認くださいますようお願い致します。" class="btn-registration"></a>
+                    </div>
+                </div>
+            </transition>
+
+        </div>
     </div>
     <div id="top" class="page-lp-reborn01">
         <h1>

@@ -31,6 +31,14 @@ module.exports = (env, argv) => {
       module: {
         rules: [
           {
+            test: /\.vue$/,
+            use: [
+              {
+                loader: 'vue-loader'
+              },
+            ]
+          },
+          {
             test: /\.(js)$/,
             use: [
               {
@@ -42,22 +50,14 @@ module.exports = (env, argv) => {
                 }
               },
             ]
-          },
-          {
-            test: /\.vue$/,
-            use: [
-              {
-                loader: 'vue-loader'
-              },
-            ]
           }
         ]
       },
       resolve: {
         extensions: ['.js'],
         alias: {
-          vue$: 'vue/dist/vue.common.js'
-      }
+          vue$: "vue/dist/vue.esm.js"
+        },
       },
       cache: true
     },
@@ -67,7 +67,7 @@ module.exports = (env, argv) => {
       },
       output: {
         path: path.resolve(__dirname, './public/sema/css'),
-        filename: `site_base_new.css`
+        filename: `lp.css`
       },
       module: {
         rules: [
@@ -127,7 +127,7 @@ module.exports = (env, argv) => {
         ]
       },
       plugins: [
-        new ExtractTextPlugin('site_base_new.css'),
+        new ExtractTextPlugin('lp.css'),
         new SpritesmithPlugin({
           src: {
             cwd: './src/sprite_assets/',
@@ -138,7 +138,7 @@ module.exports = (env, argv) => {
               css: './src/scss/_sprite.scss'
           },
           apiOptions: {
-              cssImageRef: "./img/i/sprite.png"
+              cssImageRef: "../../img/i/sprite-[hash].png"
           },
           spritesmithOptions: {
             padding: 4
