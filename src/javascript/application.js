@@ -14,6 +14,12 @@ Vue.component('start-view', {
             vm.start = false;
             vm.stage = true;
         },
+        onSkip: function(e) {
+            window.scrollTo({
+                top: 1136,
+                behavior: "smooth"
+            })
+        },
     },
 })
 
@@ -30,6 +36,12 @@ Vue.component('stage', {
         },
         onMoveStageLeft: function(e) {
             vm.onMoveStageLeft(e);
+        },
+        onSkip: function(e) {
+            window.scrollTo({
+                top: 1136,
+                behavior: "smooth"
+            })
         },
     }
 })
@@ -76,18 +88,15 @@ const vm = new Vue({
         },
         getRandomInt: function(max) {
             return Math.floor(Math.random() * Math.floor(max));
-        }
+        },
+        onSkip: function(e) {
+            window.scrollTo({
+                top: 1136,
+                behavior: "smooth"
+            })
+        },
     },
     mounted() {
         this.resultNum = this.getRandomInt(9);
-    }
-});
-
-window.addEventListener('click', e => {
-    if(e.srcElement.classList.contains('c-btn-skip')) {
-        window.scrollTo({
-            top: 1136,
-            behavior: "smooth"
-        })
     }
 });
