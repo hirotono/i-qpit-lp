@@ -16,7 +16,7 @@ Vue.component('start-view', {
         },
         onSkip: function(e) {
             window.scrollTo({
-                top: 1136,
+                top: 1236,
                 behavior: "smooth"
             })
         },
@@ -39,7 +39,7 @@ Vue.component('stage', {
         },
         onSkip: function(e) {
             window.scrollTo({
-                top: 1136,
+                top: 1236,
                 behavior: "smooth"
             })
         },
@@ -91,7 +91,7 @@ const vm = new Vue({
         },
         onSkip: function(e) {
             window.scrollTo({
-                top: 1136,
+                top: 1236,
                 behavior: "smooth"
             })
         },

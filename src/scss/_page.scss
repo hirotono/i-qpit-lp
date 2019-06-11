@@ -130,7 +130,7 @@
 
 .content-box {
     position: relative;
-    height: 1136px;
+    height: 1226px;
 }
 
 .page-top-start {
@@ -139,24 +139,33 @@
         display: flex;
         justify-content: center;
         width: 100%;
+        margin-bottom: 8px;
+        font-size: 27px;
     }
     .diagnosis {
         width: 100%;
         position: absolute;
         left: 0;
-        bottom: 50px;
+        bottom: 25px;
     }
     .btn-diagnosis {
         margin: auto;
         display: flex;
         justify-content: center;
         width: 600px;
+        &-img {
+            margin-bottom: 30px;
+        }
     }
     .c-btn-skip {
         position: absolute;
         bottom: -95px;
         left: 50%;
         margin-left: -118px;
+    }
+    .navi-registration {
+        display: flex;
+        justify-content: space-between
     }
 }
 
