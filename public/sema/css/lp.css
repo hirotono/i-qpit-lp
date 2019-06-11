@@ -229,7 +229,7 @@ a {
 
 .content-box {
   position: relative;
-  height: 1136px; }
+  height: 1226px; }
 
 .page-top-start {
   position: absolute; }
@@ -242,12 +242,14 @@ a {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 27px; }
   .page-top-start .diagnosis {
     width: 100%;
     position: absolute;
     left: 0;
-    bottom: 50px; }
+    bottom: 25px; }
   .page-top-start .btn-diagnosis {
     margin: auto;
     display: -webkit-box;
@@ -259,11 +261,22 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     width: 600px; }
+    .page-top-start .btn-diagnosis-img {
+      margin-bottom: 30px; }
   .page-top-start .c-btn-skip {
     position: absolute;
     bottom: -95px;
     left: 50%;
     margin-left: -118px; }
+  .page-top-start .navi-registration {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 .page-stage {
   position: absolute;
